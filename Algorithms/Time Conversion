@@ -1,0 +1,25 @@
+#!/bin/python3
+
+import sys
+
+def timeConversion(s):
+    if(s[8:10]=="PM"):
+        hours=int(s[0:2])
+        if (hours!=12):
+            hours=hours+12
+        res = format(hours, "02") + s[2:8]
+        return(res)
+    elif s[0:2] == "12":
+        hours="00"
+        res = format(hours, "02") + s[2:8]
+        return(res)
+	
+    else:
+        return(s)
+        
+        
+    
+
+s = input().strip()
+result = timeConversion(s)
+print(result)
