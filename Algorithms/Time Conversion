@@ -13,13 +13,32 @@ def timeConversion(s):
         hours="00"
         res = format(hours, "02") + s[2:8]
         return(res)
-	
     else:
         return(s)
-        
-        
-    
-
 s = input().strip()
 result = timeConversion(s)
 print(result)
+
+
+
+
+
+#################Another Code for all test cases##############################
+
+#!/bin/python3
+
+import sys
+
+time_string = input().strip()
+is_pm = (time_string[8:10] == "PM")
+if is_pm:
+	hours = int(time_string[0:2])
+	if hours != 12:
+		hours += 12
+	res = format(hours, "02") + time_string[2:8]
+	print(res)
+
+elif time_string[0:2] == "12":
+	print("00" + time_string[2:8])
+else:
+	print(time_string[0:8])
