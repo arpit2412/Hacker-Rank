@@ -1,1 +1,1 @@
-# Hacker-Rank
+# Hacker-Rank Solutions to basic problems.
